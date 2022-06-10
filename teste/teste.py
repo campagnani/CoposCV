@@ -1,5 +1,4 @@
 import cv2 as cv
-import numpy as np
 
 #Importa a imagem em escala de cinza:
 im = cv.imread('frame.jpeg', 0)
@@ -15,7 +14,7 @@ image = cv.resize(im, (int(len(im[0])/2), int(len(im)/2)))
 #beta = 100
 #bc_im = np.uint8(np.clip((alpha * image + beta), 0, 255))
 
-#Aplicando um limiar de luminosidade:
+#Aplicando binarizacao por limiar:
 threshold = 130
 for i in range(len(image)):
     for j in range(len(image[0])):
